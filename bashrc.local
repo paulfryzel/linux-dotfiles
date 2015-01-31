@@ -1,0 +1,25 @@
+alias c='cat'
+alias j='jobs'
+alias t='tree'
+alias v='vim'
+alias cn='cd $HOME/Workspace/condenast'
+alias gh='ws'
+alias ws='cd $HOME/Workspace'
+
+alias gc='git commit'
+alias gp='git push'
+alias gap='git add --patch'
+alias gco='git checkout'
+alias gpr='git pull --rebase'
+alias gst='git status'
+
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
+export NVM_DIR="/home/paulfryzel/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+VIMRUNTIME=/usr/bin
+EDITOR=/usr/bin/vim
+
+PATH=$PATH:$HOME/bin
