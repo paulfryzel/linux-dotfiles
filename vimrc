@@ -2,7 +2,6 @@ execute pathogen#infect()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-colorscheme elflord
 syntax on
 filetype plugin indent on
 
@@ -13,17 +12,25 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|DS_Store)$',
   \ }
 
+set autoread
 set background=dark
 set nocursorline
 set cc=80
 set encoding=utf-8
 set expandtab
+set incsearch
+set laststatus=2
+set nohlsearch
+set noswapfile
 set number
 set shiftwidth=2
 set tabstop=2
 
 set splitright
 set splitbelow
+
+set list
+set listchars=tab:>-,trail:-,extends:>,precedes:<
 
 au FileType javascript set dictionary+=$HOME/.vim/dict/node.dict
 au BufRead,BufNewFile *.json setl sw=4 ts=4 sts=0 et
@@ -32,3 +39,24 @@ hi CursorLine term=NONE cterm=NONE ctermbg=NONE
 hi OverLength ctermbg=red ctermfg=white guibg=#dc322f
 
 :set fillchars+=vert:\ 
+
+function! SyntaxItem()
+  return synIDattr(synID(line("."),col("."),1),"name")
+endfunction
+
+if has('statusline')
+  set statusline=%#Question#                   " set highlighting
+  set statusline+=%#WarningMsg#                " set highlighting
+  set statusline+=%f\                          " file name
+  set statusline+=%#Question#                  " set highlighting
+  set statusline+=%h%m%r%w\                    " flags
+  set statusline+=%y\                          " file type
+  set statusline+=%{(&fenc==\"\"?&enc:&fenc)}, " encoding
+  set statusline+=%{&fileformat}               " file format
+  set statusline+=%=                           " ident to the right
+  set statusline+=%-7.(%l,%c%V%)\ %<%P         " cursor position/offset
+endif
+
+set t_Co=256
+let base16colorspace=256
+colorscheme base16-solarized

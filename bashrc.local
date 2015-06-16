@@ -1,17 +1,20 @@
 alias c='cat'
 alias j='jobs'
 alias t='tree'
+alias e='emacs -nw'
 alias v='vim'
 alias cn='cd $HOME/Workspace/condenast'
 alias gh='ws'
 alias ws='cd $HOME/Workspace'
 
-alias gc='git commit'
+alias gc='git commit -v'
 alias gp='git push'
 alias gap='git add --patch'
 alias gco='git checkout'
 alias gpr='git pull --rebase'
 alias gst='git status'
+
+alias syi='sudo yum install'
 
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
@@ -23,3 +26,12 @@ VIMRUNTIME=/usr/bin
 EDITOR=/usr/bin/vim
 
 PATH=$PATH:$HOME/bin
+PATH=$PATH:$HOME/Workspace/vendor/depot_tools
+PATH=$PATH:/opt/dart/dart-sdk/bin
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# OPAM configuration
+. /home/paulfryzel/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
