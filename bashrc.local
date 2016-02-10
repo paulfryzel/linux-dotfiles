@@ -1,11 +1,15 @@
 alias c='cat'
-alias j='jobs'
-alias t='tree'
 alias e='emacs -nw'
+alias j='jobs'
+alias n='nvm use'
+alias t='tree'
 alias v='vim'
 alias cn='cd $HOME/Workspace/condenast'
 alias gh='ws'
 alias ws='cd $HOME/Workspace'
+
+export V8='/home/paulfryzel/Workspace/vendor/v8'
+alias d8='$V8/out/native/d8'
 
 alias gc='git commit -v'
 alias gp='git push'
@@ -35,3 +39,12 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.dark.sh"
 
 # OPAM configuration
 . /home/paulfryzel/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+# Idris
+PATH=$PATH:$HOME/.cabal/bin
+PATH=$PATH:$HOME/Workspace/idris-sandbox/.cabal-sandbox/bin
+
+# N|Solid
+# PATH=$PATH:$HOME/Workspace/nodesource/nsolid/bin
+alias nsolid='$HOME/Workspace/nodesource/nsolid/bin/nsolid'
+alias nsolid-cli='$HOME/Workspace/nodesource/nsolid/bin/nsolid-cli'

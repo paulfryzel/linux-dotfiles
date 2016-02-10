@@ -12,6 +12,10 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|DS_Store)$',
   \ }
 
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
 set autoread
 set background=dark
 set nocursorline
@@ -31,6 +35,9 @@ set splitbelow
 
 set list
 set listchars=tab:>-,trail:-,extends:>,precedes:<
+
+set undofile
+set undodir=/home/paulfryzel/.vimundo/
 
 au FileType javascript set dictionary+=$HOME/.vim/dict/node.dict
 au BufRead,BufNewFile *.json setl sw=4 ts=4 sts=0 et
@@ -60,3 +67,5 @@ endif
 set t_Co=256
 let base16colorspace=256
 colorscheme base16-solarized
+
+let g:ycm_confirm_extra_conf=0
