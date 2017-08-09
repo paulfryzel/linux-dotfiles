@@ -4,7 +4,10 @@
   ui = auto
 [core]
   editor = vim
+  autocrlf = false
+  filemode = false
   whitespace = warn
+  excludesfile = /home/paulfryzel/.gitignore
 [help]
   autocorrect = 10
 [interactive]
@@ -16,6 +19,7 @@
 [user]
   name = Paul Fryzel
   email = paul.fryzel@gmail.com
+  signingkey = 50E61BF1
 [push]
   default = tracking
 [rebase]
