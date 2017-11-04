@@ -1,5 +1,6 @@
 alias c='cat'
 alias e='emacs -nw'
+alias xe='emacs -mm'
 alias j='jobs'
 alias n='nvm use'
 alias t='tree'
@@ -30,28 +31,16 @@ alias pip='pip3'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
-export NVM_DIR="/home/paulfryzel/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 VIMRUNTIME=/usr/bin
 EDITOR=/usr/bin/vim
-
-PATH=$PATH:$HOME/bin
-PATH=$PATH:$HOME/Workspace/vendor/depot_tools
-PATH=$PATH:/opt/dart/dart-sdk/bin
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # OPAM configuration
-. /home/paulfryzel/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-
-# Idris
-PATH=$PATH:$HOME/.cabal/bin
-PATH=$PATH:$HOME/Workspace/idris-sandbox/.cabal-sandbox/bin
+. /home/paul/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 # N|Solid
-# PATH=$PATH:$HOME/Workspace/nodesource/nsolid/bin
 alias nsolid='$HOME/Workspace/nodesource/nsolid/bin/nsolid'
 alias nsolid-cli='$HOME/Workspace/nodesource/nsolid/bin/nsolid-cli'
