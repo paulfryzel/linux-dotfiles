@@ -12,8 +12,8 @@ alias h='history'
 alias gh='ws'
 alias ws='cd $HOME/workspace'
 
-export V8='/home/paulfryzel/Workspace/vendor/v8'
-alias d8='$V8/out/native/d8'
+export V8='$HOME/workspace/google/v8/v8'
+alias d8='$HOME/workspace/google/v8/v8/out.gn/x64.release/d8'
 
 alias gc='git commit -v'
 alias gcs='git commit -S -v'
